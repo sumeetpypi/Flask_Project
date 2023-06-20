@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
+</script>
+        
+
+        <div class="page-notification" style= "background-color:white">
+        <!--    <div class="container">-->
+        <!--        <div class="row">-->
+        <!--            <div class="col-lg-12">-->
+        <!--                <nav aria-label="breadcrumb">-->
+        <!--                    <ol class="breadcrumb justify-content-center">-->
+        <!--                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>-->
+        <!--                        <li class="breadcrumb-item"><a href="#">Category</a></li>-->
+        <!--                    </ol>-->
+        <!--                </nav>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <br>
+    
+<main>
+ <!-- breadcrumb End -->
+        <!-- Top Posts Start -->
+        <div class="top-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Popular Books</h2>
+                        </div>
+                    </div>
+                </div>
+                 {% for data_ in data %}
+                <div class="row justify-content-lg-between">
+                    <div class="col-lg-8 col-md-8">
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+
+                                     {% set path = "books/{}/{}/{}".format(data_[2],data_[1], data_[0]) %}
+                             <a href="{{url_for("download", download=data_[1])}}"><img src="{{ url_for('static', filename=path)}}" style="width:200px; height:200px;"></a>
+
+                                </div>
+                                <div class="job-tittle">
+                                    <span>Popular books</span>
+                                    <h4>{{ data_[1] }}</h4>
+                                    <p>Format: PDF</p>
+                                    <p>Language: English</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="google-add mb-40">
+                            <img src="assets/img/gallery/Ad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Top Posts End -->
+        <!--Pagination Start  -->
+        <div class="pagination-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="single-wrap d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-start " id="myDIV">
+                                    <li {% if offset =="60" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="60")}}'>1</a></li>
+                                    <li {% if offset =="120" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="120")}}'>2</a></li>
+          <li {% if offset =="180" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="180")}}'>3</a></li>
+          <li {% if offset =="240" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="240")}}'>4</a></li>
+                                    <li {% if offset =="300" %} class="current" {% endif %}><a class="page-link" href='{{url_for("pages", offset="300")}}'>5</a></li>
+          <li {% if offset =="360" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="360")}}'>6</a></li>
+          <li {% if offset =="420" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="420")}}'>7</a></li>
+          <li {% if offset =="480" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="480")}}'>8</a></li>
+          <li {% if offset =="540" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="540")}}'>9</a></li>
+                                     <li {% if offset =="600" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="600")}}'>10</a></li>
+                                                                  <li {% if offset =="660" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="660")}}'>11</a></li>
+                                    <li {% if offset =="720" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="720")}}'>12</a></li>
+          <li {% if offset =="780" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="780")}}'>13</a></li>
+          <li {% if offset =="840" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="840")}}'>14</a></li>
+                                    <li {% if offset =="900" %} class="current" {% endif %}><a class="page-link" href='{{url_for("pages", offset="900")}}'>15</a></li>
+          <li {% if offset =="960" %} class="page-item active" {% endif %}><a class="page-link" href='{{url_for("pages", offset="960")}}'>16</a></li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Pagination End  -->
+        <!-- Nwes slider Start -->
+
+        <div class="latest-posts pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Categories</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{ url_for("books_navigation", nav="angularjs")}}'><p>Angularjs</p></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{ url_for("books_navigation", nav="ajax")}}'><p>Ajax</p></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+
+                            <a href='{{url_for("books_navigation", nav="Apache")}}'><p>Apache</p></a>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Azure")}}'><p>Azure</p></a>
+
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Biology")}}'><p>Biology</p></a>
+
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="cpp")}}'><p>C++</p></a>
+
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="cryptography")}}'><p>Cryptography</p></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="c-sharp")}}'><p>c-sharp</p></a>
+
+                        </div>
+                    </div>
+
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="computing")}}'><p>css</p></a>
+
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="golang Programming")}}'> <p>Golang Programming</p></a>
+
+                        </div>
+                    </div>
+
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Java Programming")}}'> <p>Java Programming</p></a>
+
+                        </div>
+                    </div>
+
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Perl-Programming")}}'> <p>Perl Programming</p></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Python Programming")}}'> <p>Python Programming</p></a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="r programming")}}'><p>r programming</p></a>
+
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="Rust Programming")}}'><p>Rust Programming</p></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <a href='{{url_for("books_navigation", nav="scala")}}'><p>Scala</p></a>
+
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Nwes slider End -->
+        <!-- Latest Posts Area -->
+     <section class="wantToWork-area gray-bg ">
+            <div class="container">
+                <div class="wants-wrapper w-padding2">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-7 col-md-10">
+                            <div class="wantToWork-caption wantToWork-caption2">
+                                <h2>Subscribe for latest updates</h2>
+                                <p>Subscribe for more information and latest updates , we will send you latest books and updates</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <form method="POST" class="search-box">
+                                <div class="input-form">
+                                    <input type="text" placeholder="Enter your email">
+                                </div>
+                                <div class="search-form">
+                                    <a href="{{ url_for("index")}}">Subscribe</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</main>
+
+
+
+{% endblock %}

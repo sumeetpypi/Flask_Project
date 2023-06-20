@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+<script data-ad-client="ca-pub-8663458666354140" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    
+<title>Tech books {{title}}</title>
+<link rel="icon" href="{{ url_for('static', filename='images/icons8-pdf-100.png') }}">
+
+<meta name="google-site-verification" content="rrQA4LntBNrfKtPG5uq_M8Db_31WBEa50hV8ePT_yvw" />
+<meta charset="utf-8" name="description" content="Programming is one of the most sought-after professional fields in the world. It presents candidates with a galore of opportunities to learn and earn, Download free java, linux, perl, microsoft, python, AI, articles, networking, oracle, graphics,goole, html, ios, .net and many more pdfs for free">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+ 
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 400px;
+  height:30px;
+  
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 100px;
+ 
+  height:30px;
+  background: #0d0d0d;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #944a94;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button {
+  background-color: #db0d48;
+  border: none;
+  color: white;
+  height:50px;
+  text-align: center;
+  width:200px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+.btn {
+  border: none;
+  outline: none;
+  height:50px;
+  width:200px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+ Style the active class, and buttons on mouse-over 
+.active, .btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/framework.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+
+</head>
+
+
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace">
+
+        <li><a href='{{ url_for("index")}}'><i class="fas fa-home fa-lg"></i></a></li>
+        <li><a href='{{ url_for("books_navigation", nav="my-pdf")}}'>Collections</a></li>
+        <li><a href='{{ url_for("books_navigation", nav="notes-for-professionals")}}'>Notes</a></li>
+       
+
+      </ul>
+    </div>
+
+    <!-- ################################################################################################ -->
+  </div></div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="one_half first">
+      <h1 class="logoname"><img src="{{ url_for('static', filename='images/logo.png') }}"><a href='{{url_for("index")}}'><span>Tech</span>  Books</a></h1>
+      <br><br>
+       <form class="example" action='{{url_for("search")}}'>
+  <input type="text" placeholder="search (java, python, oracle , games)" name="search (java, python, oracle , games)">
+  <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+       
+    </div>
+    <div class="one_half">
+      <ul class="nospace clear">
+          <li class="one_half first">
+          <div style="block clear"><a href='{{url_for("pages_2011")}}'> <img src="{{ url_for('static', filename='images/logo.png') }}"><span><strong class="block">Top Collection of 1000 Books</strong> Download 1000 books</span> </a></div>
+
+        </li>
+        <li class="one_half">
+          <div class="block clear"><img src="{{ url_for('static', filename='images/icons8-exe-100.png') }}"><span><strong class="block">Coming Soon</strong> Books-world Desktop software</span>  </div>
+
+        </li>
+
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+  <nav id="mainav" class="hoc clear">
+     <ul class="clear">
+      <li {% if page =="networking" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="networking")}}'>Networking</a></li>
+      <!--<li class="active"><a class="drop" href="#">Pages</a>-->
+      <!--  <ul>-->
+      <!--    <li class="active"><a href="gallery.html">Gallery</a></li>-->
+      <!--    <li><a href="full-width.html">Full Width</a></li>-->
+      <!--    <li><a href="sidebar-left.html">Sidebar Left</a></li>-->
+      <!--    <li><a href="sidebar-right.html">Sidebar Right</a></li>-->
+      <!--    <li><a href="basic-grid.html">Basic Grid</a></li>-->
+      <!--    <li><a href="font-icons.html">Font Icons</a></li>-->
+      <!--  </ul>-->
+      <!--</li>-->
+      <!--<li><a class="drop" href="#">Dropdown</a>-->
+      <!--  <ul>-->
+      <!--    <li><a href="#">Level 2</a></li>-->
+      <!--    <li><a class="drop" href="#">Level 2 + Drop</a>-->
+      <!--      <ul>-->
+      <!--        <li><a href="#">Level 3</a></li>-->
+      <!--        <li><a href="#">Level 3</a></li>-->
+      <!--        <li><a href="#">Level 3</a></li>-->
+      <!--      </ul>-->
+      <!--    </li>-->
+      <!--    <li><a href="#">Level 2</a></li>-->
+      <!--  </ul>-->
+      <!--</li>-->
+      <li {% if page =="oracle" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="oracle")}}'>Oracle</a></li>
+      <li {% if page =="mobile" %} class="active" {% endif %}><a href= '{{ url_for("books_navigation", nav="mobile")}}'>Mobile</a></li>
+      <li {% if page =="cyber-security" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="cyber-security")}}'>Cyber Security</a></li>
+      <li {% if page =="game" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="game")}}'>Games</a></li>
+      <li {% if page =="autocad" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="autocad")}}'>AutoCad</a></li>
+      <li {% if page =="graphics" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="graphics")}}'>Graphics</a></li>
+      <li {% if page =="linux" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="linux")}}'>Linux</a></li>
+      <li {% if page =="software" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="software")}}'>Software</a></li>
+      <li {% if page =="HTML5" %} class="active" {% endif %}><a href='{{ url_for("books_navigation", nav="HTML5")}}'>HTML5</a></li>
+    </ul>
+    </ul>
+   
+  </nav>
+
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h1 class="logoname"><span>Tech</span>  Books</h1>
+      <p class="btmspace-30">A programming language is a set of commands, instructions, and other syntax use to create a software program. Languages that programmers use to write code are called "high-level languages." This code can be compiled into a "low-level language," which is recognized directly by the computer hardware.</a></p>
+<!--      <ul class="faico clear">-->
+<!--        <li><a class="faicon-dribble" href="#"><i class="fab fa-dribbble"></i></a></li>-->
+<!--        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>-->
+<!--        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>-->
+<!--        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>-->
+<!--        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>-->
+<!--        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>-->
+<!--      </ul>-->
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Others</h6>
+      <ul class="nospace linklist">
+        <li><a href='{{ url_for("books_navigation", nav="css3")}}'>CSS3</a></li>
+        <li><a href='{{ url_for("books_navigation", nav="iphone")}}'>Iphone</a></li>
+        <li><a href='{{ url_for("books_navigation", nav="matlab")}}'>Matlab</a></li>
+         <li><a href='{{ url_for("books_navigation", nav="photoshop")}}'>Photoshop</a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Contact Us</h6>
+      <p class="nospace btmspace-15">Submit your details to contact us.</p>
+      <form method="post" action='{{url_for("index")}}'>
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Submit</button>
+          <br>
+          <h5>{{label}}</h5>
+        </fieldset>
+      </form>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved<a href="#"></a></p>
+    <p class="fl_right"><a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+<script src="{{url_for('static', filename = 'jquery/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename = 'jquery/jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename = 'jquery/jquery.mobilemenu.js')}}"></script>
+<script src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+<!--<script src="{{url_for('static', filename = 'js/jquery.min.js')}}"></script>-->
+<!--<script src="{{url_for('static', filename = 'js/main.js')}}"></script>-->
+<!--<script src="{{url_for('static', filename = 'js/popper.js')}}"></script>-->
+
+
+</body>
+
+</html>
+

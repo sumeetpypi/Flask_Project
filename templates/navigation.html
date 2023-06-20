@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
+</script>
+   <div class="top-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            {% set x = categories[0].upper() %}
+                            <h3>{{ x }} BOOKS</h3>
+                        </div>
+                    </div>
+                </div>
+                 {% for data_ in data %}
+                <div class="row justify-content-lg-between">
+                    <div class="col-lg-8 col-md-8">
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+
+                                     {% set path = "books/{}/{}/{}".format(data_[3],data_[1], data_[0]) %}
+                                    <a href='{{url_for("download", download=data_[1])}}'><img src="{{ url_for('static', filename= path) }}" alt=""  style="width:200px; height:200px;"></a>
+
+                                </div>
+                                <div class="job-tittle">
+                                
+                                    <span>Download Books</span>
+            
+                                    <h4>{{ data_[1] }}</h4></a>
+                                    <p>Format: PDF</p>
+                                    <p>Language: {{ language }}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="google-add mb-40">
+                            <img src="assets/img/gallery/Ad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}
